@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorium | Autonomous AI Hivemind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0a;
+            --card-bg: #141414;
+            --text-main: #ffffff;
+            --text-dim: #a0a0a0;
+            --accent: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+            --accent-color: #8b5cf6;
+            --border: rgba(255, 255, 255, 0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        header {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, #1a1033 0%, var(--bg) 70%);
+        }
+
+        h1 {
+            font-size: clamp(3rem, 10vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            background: var(--accent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            font-weight: 400;
+            color: var(--text-dim);
+            margin-bottom: 1.5rem;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            color: var(--text-dim);
+        }
+
+        .motto-hero {
+            font-style: italic;
+            font-family: serif;
+            margin-bottom: 2.5rem;
+            opacity: 0.7;
+        }
+
+        .cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(99, 102, 241, 0.4);
+        }
+
+        /* Section Defaults */
+        section {
+            padding: 100px 0;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        /* What It Is */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.25rem;
+            color: var(--text-dim);
+        }
+
+        /* Feature Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 20px;
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(139, 92, 246, 0.5);
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .card p {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+        }
+
+        /* Stack Pills */
+        .stack-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .pill {
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+        }
+
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            text-align: center;
+            border-top: 1px solid var(--border);
+            color: var(--text-dim);
+            font-size: 0.9rem;
+        }
+
+        .footer-motto {
+            display: block;
+            margin-bottom: 1rem;
+            font-style: italic;
+            color: var(--text-main);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 3rem; }
+            section { padding: 60px 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Factorium</h1>
+            <p class="tagline">The Autonomous AI Hivemind</p>
+            <p class="description">A local-first operating system for collaborative intelligence. Multiple AI agents that remember, reason, and act with a human in the loop.</p>
+            <p class="motto-hero">Non ducor, duco pariter.</p>
+            <a href="https://github.com/misomalcek" class="cta">Explore Source</a>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>What it is</h2>
+            <div class="about-content">
+                Factorium is an advanced orchestration layer designed to transform isolated LLMs into a cohesive, reasoning entity. It bridges the gap between raw inference and meaningful, autonomous action.
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="grid">
+                <div class="card">
+                    <h3>Multi-agent orchestration</h3>
+                    <p>Seamlessly coordinate multiple specialized agents.</p>
+                </div>
+                <div class="card">
+                    <h3>Semantic memory</h3>
+                    <p>Unified vector and graph-based long-term recall.</p>
+                </div>
+                <div class="card">
+                    <h3>Knowledge / RAG</h3>
+                    <p>Deep integration for context-aware retrieval.</p>
+                </div>
+                <div class="card">
+                    <h3>Local LLM inference</h3>
+                    <p>Privacy-first execution on your own hardware.</p>
+                </div>
+                <div class="card">
+                    <h3>Tool runtime</h3>
+                    <p>Secure execution environments for agentic action.</p>
+                </div>
+                <div class="card">
+                    <h3>Hive visualization</h3>
+                    <p>Real-time insights into agentic thought processes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stack">
+        <div class="container">
+            <div class="stack-container">
+                <span class="pill">TypeScript</span>
+                <span class="pill">React</span>
+                <span class="pill">Qdrant</span>
+                <span class="pill">PostgreSQL</span>
+                <span class="pill">pgvector</span>
+                <span class="pill">Apache AGE</span>
+                <span class="pill">llama.cpp</span>
+                <span class="pill">gemma-4</span>
+                <span class="pill">Nomic embeddings</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-motto">Non ducor, duco pariter.</span>
+            <p>An autonomous AI hivemind · human in the loop</p>
+        </div>
+    </footer>
+
+</body>
+</html>
