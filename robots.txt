@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://misomalcek.github.io/factorium-landing/sitemap.xml
+<!-- vault push test 40bcfd3 -->
